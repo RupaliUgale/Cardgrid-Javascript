@@ -1,0 +1,136 @@
+body {
+	margin: 0 auto;
+	max-width: 960px;
+	font-family: sans-serif;
+}
+
+.container {
+	border-top: .4rem solid #BFBFBF;
+	display: grid;
+	background-color: #EFEFEF;
+	grid-template-columns: 3fr 1fr;
+	grid-template-areas: "cardwrp sidebar" "footer footer";
+}
+
+.card-wrapper {
+	grid-area: cardwrp;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+footer {
+	grid-area: footer;
+	font-style: italic;
+	font-size: 0.6rem;
+	margin-bottom: 1rem;
+}
+
+header,
+footer {
+	text-align: center;
+	padding: 0.6rem;
+	color: #000;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+	font-size: 4rem;
+	text-align: center;
+	color: #fff;
+	text-align: center;
+	padding: 3.6rem;
+}
+
+
+/* classes for card styleing */
+
+.cardType-1 {
+	background-color: #2B8EAD;
+}
+
+.cardType-2 {
+	background-color: #6F98A8;
+}
+
+.cardType-3 {
+	background-color: #BFBFBF;
+}
+
+.cardType-4 {
+	background-color: #2F454E;
+}
+
+.btn-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+.btn {
+	padding: 0.5rem;
+	background-color: #72C3DC;
+	box-shadow: 0 0.3rem #2B8EAD;
+	border-radius: 0.3em;
+	width: 70%;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin: 0.7rem 0;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 600px) {
+	header {
+		text-align: center;
+		background-color: #333333;
+		color: #ffffff
+	}
+	.container {
+		grid-template-columns: 4fr;
+		border-top: 0;
+		background-color: #ffffff;
+		grid-template-areas: "sidebar" "cardwrp" "footer";
+		padding: 0.5rem 1rem;
+	}
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-row-gap: 0.5rem;
+	}
+	.cardType-1 {
+		border-left: 0.4rem solid #2B8EAD;
+	}
+	.cardType-2 {
+		border-left: 0.4rem solid #6F98A8;
+	}
+	.cardType-3 {
+		border-left: 0.4rem solid #BFBFBF;
+	}
+	.cardType-4 {
+		border-left: 0.4rem solid #2F454E;
+	}
+	.btn {
+		width: auto;
+		margin: 0 0.5rem;
+	}
+	.btn-wrapper {
+		flex-direction: row;
+		padding: 0;
+		margin-bottom: 0.8rem;
+	}
+	.card {
+		padding: 1rem;
+		font-size: 1rem;
+		background-color: #EFEFEF;
+		color: #000;
+	}
+}
